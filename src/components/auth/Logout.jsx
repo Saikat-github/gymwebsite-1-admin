@@ -39,15 +39,16 @@ const Logout = ({ isAdmin, setIsOpen }) => {
                         onClick={handleLogOut}
                         className="cursor-pointer flex gap-2 items-center hover:text-orange-600 text-sm"
                     >
-                        <Power size={20} />
+                        <Power className="w-5 text-orange-600" />
                         {loader ? <Loader2 className='w-4 animate-spin' /> : "Logout"}
                     </button>
                     :
                     <NavLink
-                        className="hover:text-orange-600"
+                        className="cursor-pointer flex gap-2 items-center hover:text-orange-600 text-sm"
                         to="/admin/login"
                         onClick={() => setIsOpen(false)}
                     >
+                        <LogIn className="w-5 text-orange-600" />
                         Login
                     </NavLink>
             }
