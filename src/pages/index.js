@@ -5,7 +5,7 @@ import SingleMember from "./SingleMember";
 import PaymentsPage from "./PaymentsPage";
 import GymInfo from "./GymInfo";
 import Login from "./auth/Login";
-import VerifySignIn from "./auth/VerifySignin";
+import VerifySignIn from "./auth/VerifySignIn";
 import NotFound from "./NotFound";
 import AdminManagement from "./AdminManagement";
 import DayPasses from "./day-passes/DayPasses";
