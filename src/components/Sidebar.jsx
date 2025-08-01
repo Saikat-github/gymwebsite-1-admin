@@ -60,7 +60,7 @@ const Sidebar = () => {
 
         {/* Logout */}
         <div className="px-4 pb-6">
-          <Logout isAdmin={isAdmin} />
+          <Logout isAdmin={isAdmin} setIsOpen={setIsOpen}/>
         </div>
       </aside>
     </>

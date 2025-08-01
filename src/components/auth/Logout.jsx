@@ -20,6 +20,7 @@ const Logout = ({ isAdmin, setIsOpen }) => {
                 navigate('/admin/login');
             }
         } catch (error) {
+            console.log(error);
             toast.error(error.message)
         } finally {
             setLoader(false)
