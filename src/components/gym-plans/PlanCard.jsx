@@ -30,8 +30,7 @@ const PlanCard = ({ plan, onEdit, onDelete }) => {
                 <p className=" text-gray-200 mb-2">Duration : {plan?.duration} days</p>
                 <p className=" text-gray-200 mb-2">No of Times Choosen : {plan?.noOfChosen} </p>
                 {plan?.discount && (
-                    <p className="text-xs text-green-400 italic mb-2 flex items-center">
-                        <IndianRupee className="w-3 h-3 mr-1" /> {plan?.discount}
+                    <p className="text-xs text-green-400 italic mb-2 flex items-center">Ongoing Discount {plan?.discount}%
                     </p>
                 )}
                 <ul className="text-sm text-gray-200">
