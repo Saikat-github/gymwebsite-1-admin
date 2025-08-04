@@ -52,6 +52,7 @@ const DayPasses = () => {
 
     const loadDayPasses = async () => {
         const result = await fetchDayPassesFromDB();
+        console.log(result);
         if (result) {
             setDayPasses(result.data);
             setLastDoc(result.lastDoc);

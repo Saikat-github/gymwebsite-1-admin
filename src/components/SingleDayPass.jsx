@@ -37,7 +37,7 @@ const SingleDayPass = ({ pass, loadDayPasses }) => {
             <div className="flex flex-col sm:flex-row sm:justify-between items-center mb-4 gap-2 ">
                 <h2 className="text-xl font-semibold">{pass.name} ({pass.age} yo)</h2>
 
-                {findExpiration(pass.endDate) < 0 ? <span className='bg-red-600 `text-sm px-3 py-1 rounded '>Expired</span> : <span className='bg-green-600 `text-sm px-3 py-1 rounded '>Active</span>}
+                {(pass.endDate && findExpiration(pass.endDate)) < 0 ? <span className='bg-red-600 `text-sm px-3 py-1 rounded '>Expired</span> : <span className='bg-green-600 `text-sm px-3 py-1 rounded '>Active</span>}
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-slate-300">
@@ -50,9 +50,9 @@ const SingleDayPass = ({ pass, loadDayPasses }) => {
                 <div><span className="font-semibold text-slate-200">Order ID :</span> {pass.orderId}</div>
                 <div><span className="font-semibold text-slate-200">Payment ID :</span> {pass.paymentId}</div>
                 <div><span className="font-semibold text-slate-200">Booked On :</span> {getISTTime(pass.createdAt)}</div>
-                <div><span className="font-semibold text-slate-200">Expires On :</span> {getISTTime(pass.endDate)}</div>
-                <div><span className="font-semibold text-slate-200">Payment Date :</span> {getISTTime(pass.paymentDate)}</div>
-                <div><span className="font-semibold text-slate-200">Updated At :</span> {getISTTime(pass.updatedAt)}</div>
+                <div><span className="font-semibold text-slate-200">Expires On :</span> {pass.endDate && getISTTime(pass.endDate)}</div>
+                <div><span className="font-semibold text-slate-200">Payment Date :</span> {pass.paymentDate && getISTTime(pass.paymentDate)}</div>
+                <div><span className="font-semibold text-slate-200">Updated At :</span> {pass.updatedAt && getISTTime(pass.updatedAt)}</div>
             </div>
 
             <div className="mt-6 mb-2 flex flex-col gap-2 text-sm">
