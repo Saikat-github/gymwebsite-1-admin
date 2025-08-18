@@ -21,7 +21,7 @@ const Sidebar = () => {
     <>
       {/* Toggle button (visible on small screens) */}
       <button
-        className="md:hidden fixed top-4 left-4 z-50 bg-slate-950 text-white p-2 rounded"
+        className="md:hidden fixed top-4 left-4 z-50 bg-slate-950 text-white p-2 rounded cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
         {isOpen ? <X size={24} /> : <Menu size={24} className='' />}
