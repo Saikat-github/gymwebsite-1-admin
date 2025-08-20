@@ -32,7 +32,8 @@ const DayPasses = () => {
             const result = await getDocuments("dayPasses", null, lastDocument, 10,
                 [
                     { field: 'createdAt', operator: '>=', value: startDate },
-                    { field: 'createdAt', operator: '<=', value: endDate }
+                    { field: 'createdAt', operator: '<=', value: endDate },
+                    { field: 'payment', operator: '==', value: 'completed'}
                 ]
             )
             if (result.success) {

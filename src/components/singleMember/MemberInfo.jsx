@@ -50,9 +50,8 @@ const MemberInfo = ({ member }) => {
       <div className=" rounded-lg p-4 space-y-2">
         <h3 className="font-semibold mb-2 flex items-center gap-2"><BadgeCheck size={18} className='text-orange-600' /> Current Plan</h3>
         <p>Membership Status: {member.membershipStatus}</p>
-        <p>End Date: {member.endDate && getISTTime(member.endDate)}</p>
         <p>Last Payment: {member.lastPaymentDate && getISTTime(member.lastPaymentDate)}</p>
-        
+        <p>End Date: {member.endDate && getISTTime(member.endDate)}</p>
       </div>
 
       {/* Aadhar Image */}
